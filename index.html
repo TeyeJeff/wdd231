@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/larger.css">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/navigation.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,37 +29,42 @@
             <li><a href="#">Final Project</a></li>
         </ul>
     </nav>
-    <main>
         <h1>Home</h1>
-
-        <section class="card">
+    <main>
+        <section class="card-one">
             <h2>About Me</h2>
             <p>Hello! My name is Teye Nathanel Jeff and I am from Accra, Ghana. I strive to become a Software Engineer, I am currently working as a Sales & Data Entry Personnel and I have a higher national diploma in procurement and supply chain management. I am currently enrolled in a software development problem at BYU Idaho striving to achieve my goal of becoming a software developer. I love watching football, basketball and formula 1. </p>
         </section>
 
-        <section class="card">
+        <section class="card-two">
             <h2>Student Photo</h2>
             <img src="images/profile.jpg" alt="Profile">
         </section>
-
-        <section class="card">
+        <section class="card-three">
             <h2>Web Certificate Courses</h2>
-        </section>
-        <section class="card">
-            <h2>Web Certificate Courses</h2>
-            <ul>
-                <li><a href="#">All</a></li>
-                <li><a href="#">CSE</a></li>
-                <li><a href="#">WDD130</a></li>
-                <li><a href="#">WDD131<li>
-                <li><a href="#">WDD231</a></li>
-                <li><a href="#">CSE210</a></li>
-            </ul>
-            <p>The total credits for the courses listed above is 12</p>
+            <div class="course-links">
+                <a href="#" class="course-category">All</a>
+                <a href="#" class="course-category">CSE</a>
+                <a href="#" class="course-category">WDD</a>
+                <a href="#" class="course-course">WDD 130</a>
+                <a href="#" class="course-course">WDD 131</a>
+                <a href="#" class="course-course">WDD 231</a>
+            </div>
+            <p class="credits-info">The total credits for courses listed above is 12</p>
         </section>
     </main>
     <footer>
-        <script src="script/navigation.js"></script>
+        <nav class="socialmedia">
+            <a href="https://www.github.com/"><img src="images/icons8-github.svg" alt="Github"></a>
+            <a href="https://www.instagram.com"><img src="images/icons8-instagram.svg" alt="Instagram"></a>
+            <a href="https://www.linkedin.com"><img src="images/icons8-linkedin.svg" alt="LinkedIn"></a>
+        </nav>
+        <p>
+            ©️<span id="currentyear"></span>🌴Teye Nathaniel Jeff 🌴 Ghana
+        </p>
+        <p>
+            Last Modification: <span id="lastmodified"></span>
+        </p>
     </footer>
 </body>
 </html>

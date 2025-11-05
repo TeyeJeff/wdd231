@@ -1,7 +1,7 @@
 @media only screen and (min-width: 38rem) {
     
     header, main, nav, footer {
-        max-width: 900px;
+        max-width: 1400px;
         margin: 0 auto;
     }
 
@@ -25,4 +25,88 @@
     .navigation a {
         border: none;
     }
+
+
+    main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: 
+        "card-one card-two"
+        "card-three card-three"; 
+    
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    gap: 20px;
+}
+
+.card-one {
+    grid-area: card-one;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: solid 1px #ddd;
+}
+
+.card-two {
+    grid-area: card-two;
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    border: solid 1px #ddd;
+}
+
+.card-three {
+    grid-area: card-three;
+    background-color: #333; 
+    color: white;
+    padding: 15px;
+    border: solid 1px #ddd;
+    text-align: center;
+}
+
+/* --- Section 3 Internal Layout (Web Certificate Courses) --- */
+.card-three h2 {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin: 0 0 10px 0;
+}
+
+.course-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.course-links a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    background-color: #bbb; 
+    font-weight: bold;
+}
+
+/* --- Card 2 (Student Photo) Styling --- */
+.card-two h2 {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    margin: -15px -15px 15px -15px;
+    text-align: center;
+}
+
+.card-two img {
+    /* Style the placeholder box */
+    width: 80%;
+    padding-top: 80%;
+    margin: 0 auto;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+}
+
+.card-two img { background: #f0f0f0 url('../images/profile.jpg') center/cover no-repeat; }
+
 }

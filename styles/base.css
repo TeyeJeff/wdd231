@@ -1,9 +1,12 @@
+/* base.css (Small Screen/Default Styles) */
 * {
     font-family: 'Arimo', sans-serif;
     box-sizing: border-box;
 }
 
+/* --- Header Styles --- */
 header {
+    /* Retains original 3-column setup for mobile: Logo | Site Name | Hamburger */
     display: grid;
     grid-template-columns: 24px auto 44px;
     padding: 5px 0 5px 10px;
@@ -45,6 +48,7 @@ header span {
     content: "\00D7";
 }
 
+/* --- Navigation Styles (Mobile Menu) --- */
 .navigation {
   display: none;
 }
@@ -60,22 +64,135 @@ header span {
 }
 
 .navigation a {
+    /* Dark background and white text for mobile links, matching wireframe */
     display: block;
     padding: .8rem 10px;
     text-decoration: none;
-    color: #243742;
-    border-bottom: solid 1px #ddd;
-
+    color: white; 
+    background-color: #333; 
+    border-bottom: solid 1px #555;
 }
 
 .navigation li.current {
-    background-color: #bebebe;
+    /* Current link style, matching wireframe */
+    background-color: #555; 
 }
 
 .navigation a:hover {
+    /* Hover style */
     background-color: brown;
 }
 
 h1 {
     margin-left: 10px;
+}
+
+main {
+    padding: 0 10px;
+}
+
+/* Page title */
+h1 {
+    margin: 15px 10px 10px;
+    font-size: 1.5rem;
+}
+
+/* Card ONE – About Me */
+.card-one {
+    background: #f0f0f0;
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.card-one h2 {
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+/* Card TWO – Student Photo */
+.card-two {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-two h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin: -15px -15px 15px -15px;
+    font-size: 1.25rem;
+}
+.card-two img {
+    width: 80%;
+    aspect-ratio: 1 / 1;
+    background: #bbb;
+    border: 1px solid #ccc;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Card THREE – Web Certificate Courses */
+.card-three {
+    background: #333;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+.card-three h2 {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    margin: -15px -15px 15px -15px;
+    font-size: 1.25rem;
+}
+
+/* Course buttons */
+.course-links {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 15px 0;
+}
+.course-links a {
+    background: #bbb;
+    color: #333;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Course list */
+.course-links a.course-course {
+    grid-column: 1 / -1;
+    background: #666;
+    color: #fff;
+}
+
+/* Credits text */
+.credits-info {
+    margin-top: 10px;
+    font-size: .9rem;
+}
+
+
+
+/* --- Footer/Social Media Styling --- */
+footer {
+    text-align: center;
+}
+
+.socialmedia {
+    background-color: white;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.socialmedia img {
+    filter: none; 
+    width: 32px;
+    height: 32px;
 }
