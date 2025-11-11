@@ -1,17 +1,103 @@
-@media (min-width: 768px) {
-    .header-container { flex-wrap: nowrap; }
-    .hero h2 { font-size: 2.2rem; }
-    .hero p { font-size: 1.1rem; }
-    .search-bar { flex-wrap: nowrap; }
-    .search-bar input, .search-bar select { min-width: 200px; }
-    .view-grid { grid-template-columns: repeat(3, 1fr); }
-    .view-list .card { flex-direction: row; align-items: center; text-align: left; }
-    .view-list .card-img { width: 130px; height: 130px; min-width: 130px; border-radius: 10px; margin-right: 1.5rem; }
-    .view-list .card-body { flex: 1; }
-    .view-list .card h3 { font-size: 1.1rem; }
-    .view-list p { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-}
 
-@media (min-width: 992px) {
-    .view-grid { grid-template-columns: repeat(4, 1fr); }
+/* Media Query for larger screens */
+@media (min-width: 768px) {
+    /* --- Header & Navigation (Desktop) --- */
+    
+    .header-container {
+        flex-wrap: nowrap;
+    }
+
+    /* Hides Hamburger button */
+    .hamburger-btn {
+        display: none; 
+    }
+
+    /* Displaying Navigation horizontally, always visible */
+    #mainNav {
+        display: flex !important; /* Override mobile 'display: none' */
+        flex-direction: row;
+        position: static; /* Resets positioning from mobile */
+        width: auto;
+        background-color: transparent;
+    }
+
+    #mainNav a {
+        padding: 0.5rem 1rem;
+        border-bottom: none;
+        color: white;
+    }
+
+    #mainNav a:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    /* --- Directory Grid View on larger view*/
+    .directory.view-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+    
+    /* --- Directory List View on larger screens --- */
+    /* Using CSS Grid for proper horizontal columns in list view */
+    .directory.view-list {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1fr; /* Defines columns for Name, Category, Location, Phone, Website */
+        gap: 0;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+    }
+
+    /* Adding a header row for the list view (only visible on larger views) */
+    .directory.view-list::before {
+        content: "Company Name / Category / Location / Phone / Website";
+        display: contents;
+    }
+
+    .member-row {
+        display: contents; /* Makes children part of the directory grid */
+        border-bottom: 1px solid #eee;
+        transition: background-color 0.2s;
+    }
+    
+    .member-row:hover {
+        background-color: #f0f0f0;
+    }
+
+    /* Style the actual content cells to align with the grid columns */
+    .member-row h3 { grid-column: 1; padding: 1rem; }
+    .member-row .category { grid-column: 2; padding: 1rem; }
+    .member-row .location { grid-column: 3; padding: 1rem; }
+    .member-row .phone { grid-column: 4; padding: 1rem; }
+    .member-row .website-link { grid-column: 5; padding: 1rem; }
+
+    /* Fixing display of elements in the row */
+    .member-row > * {
+        display: flex;
+        align-items: center;
+        margin: 0;
+        border-right: 1px solid #eee;
+    }
+    
+    /* Removing the last separator */
+    .member-row > *:last-child {
+        border-right: none;
+    }
+    
+    /* Special styling for the 'header' effect */
+    .directory.view-list::before {
+        grid-column: 1 / -1;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: bold;
+        padding: 10px 1rem;
+        font-size: 0.9rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1.5fr 1.5fr 1fr;
+        gap: 0;
+    }
+    
+    /* Hide mobile-specific descriptions in list view */
+    .member-row p:not(.category):not(.location) { 
+        display: none; 
+    }
 }

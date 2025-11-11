@@ -7,20 +7,16 @@
     <meta name="description" content="Discover verified businesses in Accra. Search, filter by membership level, and connect with trusted chamber members.">
     <meta name="author" content="Teye Nathaniel Jeff">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
     
-    <!-- CSS -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory-base.css">
     <link rel="stylesheet" href="styles/directory-larger.css">
     
-    <!-- JS -->
     <script src="script/directory.js" defer></script>
     
-    <!-- Open Graph -->
     <meta property="og:title" content="Teye Nathaniel Jeff | Chamber Directory Page">
     <meta property="og:description" content="Interactive business directory for Accra Chamber of Commerce members.">
     <meta property="og:image" content="https://teyejeff.github.io/wdd231/images/profile.jpg">
@@ -33,7 +29,14 @@
                 <h1>ACC</h1>
                 <span>Accra Chamber of Commerce</span>
             </div>
-            <nav>
+            
+            <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="mainNav">
                 <a href="#">Home</a>
                 <a href="#">Directory</a>
                 <a href="#">Join</a>
@@ -46,17 +49,6 @@
         <section class="hero">
             <h2>Find Trusted Businesses in Accra</h2>
             <p>Connect with verified chamber members across industries</p>
-
-            <div class="search-bar">
-                <input type="text" id="searchInput" placeholder="Search by company, location, or keyword...">
-                <select id="levelFilter">
-                    <option value="">All Levels</option>
-                    <option value="1">Member</option>
-                    <option value="2">Silver</option>
-                    <option value="3">Gold</option>
-                </select>
-                <button id="searchBtn">Search</button>
-            </div>
 
             <div class="view-toggle">
                 <button id="gridViewBtn" class="active">Grid</button>
