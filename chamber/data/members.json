@@ -1,0 +1,79 @@
+[
+  {
+    "name": "Accra Digital Hub",
+    "category": "Technology",
+    "description": "Co-working space and startup incubator for tech entrepreneurs in Accra.",
+    "location": "Osu, Greater Accra",
+    "phone": "+233 30 278 4455",
+    "email": "hello@accradigital.com",
+    "website": "https://accradigital.com",
+    "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 3
+  },
+  {
+    "name": "Golden Tulip Accra",
+    "category": "Hospitality",
+    "description": "4-star hotel with conference facilities and fine dining in the heart of Accra.",
+    "location": "Airport City, Accra",
+    "phone": "+233 30 221 3111",
+    "email": "info@goldentulipaccra.com",
+    "website": "https://goldentulipaccra.com",
+    "image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 3
+  },
+  {
+    "name": "EcoPack Solutions",
+    "category": "Manufacturing",
+    "description": "Sustainable packaging for food, retail, and export industries.",
+    "location": "Tema Industrial Area",
+    "phone": "+233 30 321 9001",
+    "email": "sales@ecopackgh.com",
+    "website": "https://ecopackgh.com",
+    "image": "https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 2
+  },
+  {
+    "name": "MediPlus Clinic",
+    "category": "Healthcare",
+    "description": "Modern clinic offering general and specialist medical care.",
+    "location": "East Legon, Accra",
+    "phone": "+233 30 298 1122",
+    "email": "info@mediplusgh.com",
+    "website": "https://mediplusgh.com",
+    "image": "https://images.unsplash.com/photo-1551601651-bc70d2e1fde0?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 2
+  },
+  {
+    "name": "Swift Cargo Ghana",
+    "category": "Logistics",
+    "description": "Freight forwarding, customs clearance, and nationwide delivery.",
+    "location": "Dzorwulu, Accra",
+    "phone": "+233 30 277 8899",
+    "email": "ops@swiftcargo.com",
+    "website": "https://swiftcargo.com",
+    "image": "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 1
+  },
+  {
+    "name": "Kente Heritage",
+    "category": "Textiles",
+    "description": "Authentic handwoven kente and modern African fashion.",
+    "location": "Osu, Accra",
+    "phone": "+233 54 123 9876",
+    "email": "shop@kenteheritage.com",
+    "website": "https://kenteheritage.com",
+    "image": "https://images.unsplash.com/photo-1604176354204-9268737828e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 2
+  },
+  {
+    "name": "GreenLeaf Farms",
+    "category": "Agriculture",
+    "description": "Organic vegetable and fruit supplier to hotels and supermarkets.",
+    "location": "Madina, Greater Accra",
+    "phone": "+233 55 678 2233",
+    "email": "supply@greenleaffarms.com",
+    "website": "https://greenleaffarms.com",
+    "image": "https://images.unsplash.com/photo-1500595046743-cd271d6942af?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+    "membershipLevel": 1
+  }
+]
