@@ -1,4 +1,6 @@
+/* base.css (Global and Mobile-First Styles for ALL Pages) */
 
+/* --- Variables --- */
 :root {
     --primary-color: #1a3765; /* Dark Blue */
     --secondary-color: #ffa500; /* Orange/Gold */
@@ -25,6 +27,7 @@ body {
 h1, h2, h3 {
     font-family: 'Alan Sans', sans-serif;
     font-weight: 700;
+    color: var(--primary-color);
 }
 
 /* --- Header & Navigation (Mobile) --- */
@@ -37,12 +40,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Allows nav to wrap on mobile */
+    flex-wrap: wrap; 
 }
 
 .logo h1 {
     font-size: 2rem;
     margin: 0;
+    color: white; 
 }
 
 .logo span {
@@ -73,23 +77,22 @@ header {
     transition: all 0.3s ease;
 }
 
-/* Navigation Links (Hidden on Mobile by default) */
+/* Navigation Links (Mobile Menu) */
 #mainNav {
-    /* Mobile styles: Hidden, full width, vertical column */
     display: none; 
     flex-direction: column;
     width: 100%;
     text-align: center;
     background-color: var(--accent-color);
-    position: absolute; /* Take it out of flow for full height on mobile */
-    top: 65px; /* Adjust based on header height */
+    position: absolute; 
+    top: 65px; 
     left: 0;
     right: 0;
     z-index: 10;
 }
 
 #mainNav.open {
-    display: flex; /* Display when JS toggles 'open' class */
+    display: flex; 
 }
 
 #mainNav a {
@@ -100,11 +103,11 @@ header {
     transition: background-color 0.3s;
 }
 
-#mainNav a:hover {
+#mainNav a:hover, #mainNav a.active {
     background-color: var(--primary-color);
 }
 
-/* --- Hero Section --- */
+/* --- Directory Hero Section --- */
 .hero {
     background-color: var(--accent-color);
     color: white;
@@ -117,6 +120,36 @@ header {
 .hero h2 {
     font-size: 1.8rem;
     margin-top: 0;
+    color: white; 
+}
+
+/* Search Bar (Mobile Fix: Ensures elements wrap) */
+.search-bar {
+    display: flex;
+    gap: 10px;
+    margin: 1.5rem auto 1rem;
+    padding: 0 1rem;
+    max-width: 600px;
+    flex-wrap: wrap; 
+    justify-content: center;
+}
+
+.search-bar input {
+    flex: 1 1 100%; 
+    min-width: 100%;
+}
+
+.search-bar select {
+    flex: 1 1 150px; 
+    min-width: 150px;
+}
+
+.search-bar button {
+    flex: 1 1 120px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    cursor: pointer;
 }
 
 /* View Toggle Buttons */
@@ -142,24 +175,10 @@ header {
     color: var(--primary-color);
 }
 
-
 /* --- Directory Grid View (Mobile) --- */
-.directory {
-    padding: 0;
-}
-
-/* Single column by default on mobile */
 .directory.view-grid {
     display: grid;
     gap: 1.5rem;
-}
-
-.member-card {
-    background-color: white;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .member-card img {
@@ -168,77 +187,130 @@ header {
     object-fit: cover;
 }
 
-.card-header, .card-body, .card-footer {
-    padding: 1rem;
+/* --- Home Page Components (Mobile Layout) --- */
+
+/* Hero Banner Fix: background-size: cover prevents overflow */
+.hero-banner {
+    background-size: cover;
+    background-position: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    position: relative;
 }
 
-.card-header {
-    text-align: center;
-    padding-bottom: 0.5rem;
+.hero-banner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+    border-radius: 8px;
 }
 
-.level-badge {
+.hero-text {
+    padding: 2rem;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white; 
+}
+
+.cta-button {
+    display: inline-block;
     background-color: var(--secondary-color);
     color: var(--primary-color);
     font-weight: bold;
-    padding: 4px 8px;
-    border-radius: 4px;
-    display: inline-block;
-    margin-bottom: 0.5rem;
-    font-size: 0.8rem;
-}
-
-.card-body a {
-    display: block;
-    color: var(--primary-color);
     text-decoration: none;
-    margin-top: 0.5rem;
-}
-
-.website-link {
-    background-color: var(--primary-color);
-    color: white !important;
-    text-align: center;
-    padding: 0.75rem;
-    border-radius: 4px;
-    margin-top: 1rem;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    margin-top: 1.5rem;
     transition: background-color 0.3s;
 }
 
-.website-link:hover {
-    background-color: var(--secondary-color);
-    color: var(--primary-color) !important;
+/* Home Section Layouts */
+.mid-section-grid {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr; /* Mobile: Stacks vertically */
 }
 
-/* --- Directory List View (Mobile) --- */
-.directory.view-list {
+.events-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.event-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-left: 5px solid var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+/* Weather & Forecast */
+.weather-section {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.weather-temp {
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--accent-color);
+    margin: 0.5rem 0;
     display: flex;
-    flex-direction: column;
-    gap: 1px; /* Separator effect */
+    justify-content: center;
+    align-items: center;
 }
 
-/* Mobile list view stacks info vertically */
-.member-row {
+.forecast-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+/* Spotlights */
+.spotlights-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.spotlight-card {
     background-color: white;
     padding: 1rem;
-    border-bottom: 1px solid #eee;
+    border: 1px solid #eee;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-.member-row h3 {
-    margin: 0 0 0.25rem 0;
-    font-size: 1.2rem;
+.spotlight-card img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid var(--secondary-color);
 }
 
-.member-row p {
-    margin: 0 0 0.5rem 0;
-    font-size: 0.9rem;
-}
-
-.member-row a {
-    font-size: 0.9rem;
-    margin-right: 1rem;
-    color: var(--primary-color);
-}
 
 /* --- Footer --- */
 footer {
