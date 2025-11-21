@@ -1,11 +1,7 @@
-// homepage.js
 
 document.addEventListener('DOMContentLoaded', () => {
     // --- Utility Functions ---
 
-    /**
-     * Updates the current year and last modified date in the footer.
-     */
     const updateFooter = () => {
         document.getElementById('currentYear').textContent = new Date().getFullYear();
         document.getElementById('lastModified').textContent = document.lastModified;

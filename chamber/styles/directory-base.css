@@ -1,6 +1,4 @@
-/* base.css (Global and Mobile-First Styles for ALL Pages) */
 
-/* --- Variables --- */
 :root {
     --primary-color: #1a3765; /* Dark Blue */
     --secondary-color: #ffa500; /* Orange/Gold */
@@ -107,7 +105,7 @@ header {
     background-color: var(--primary-color);
 }
 
-/* --- Directory Hero Section --- */
+
 .hero {
     background-color: var(--accent-color);
     color: white;
@@ -123,7 +121,6 @@ header {
     color: white; 
 }
 
-/* Search Bar (Mobile Fix: Ensures elements wrap) */
 .search-bar {
     display: flex;
     gap: 10px;
@@ -152,7 +149,6 @@ header {
     cursor: pointer;
 }
 
-/* View Toggle Buttons */
 .view-toggle {
     margin-top: 1rem;
     display: inline-flex;
@@ -175,7 +171,6 @@ header {
     color: var(--primary-color);
 }
 
-/* --- Directory Grid View (Mobile) --- */
 .directory.view-grid {
     display: grid;
     gap: 1.5rem;
@@ -187,56 +182,78 @@ header {
     object-fit: cover;
 }
 
-/* --- Home Page Components (Mobile Layout) --- */
 
-/* Hero Banner Fix: background-size: cover prevents overflow */
 .hero-banner {
-    background-size: cover;
-    background-position: center;
-    min-height: 400px;
-    display: flex;
-    align-items: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
-    border-radius: 8px;
-    margin-bottom: 2rem;
     position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.hero-banner::after {
-    content: '';
+.hero-image {
+    width: 100%;
+    height: 55vh;                 
+    min-height: 380px;
+    max-height: 700px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.hero-overlay {
     position: absolute;
-    top: 0;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,0.1) 0%,
+        rgba(0,0,0,0.4) 50%,
+        rgba(0,0,0,0.8) 100%
+    );
+}
+
+/* Text container */
+.hero-text {
+    position: absolute;
+    bottom: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-    border-radius: 8px;
-}
-
-.hero-text {
     padding: 2rem;
-    max-width: 600px;
-    z-index: 2;
+    color: white;
+    text-align: center;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    color: white; 
+    font-size: 2.2rem;
+    margin: 0 0 0.8rem 0;
+    line-height: 1.2;
+    color: white;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .cta-button {
-    display: inline-block;
     background-color: var(--secondary-color);
     color: var(--primary-color);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
     font-weight: bold;
     text-decoration: none;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    margin-top: 1.5rem;
-    transition: background-color 0.3s;
+    display: inline-block;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255,165,0,0.4);
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255,165,0,0.5);
 }
 
 /* Home Section Layouts */
