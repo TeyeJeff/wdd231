@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="styles/directory-larger.css"> 
     
     <script src="script/homepage.js" defer></script>
+    <script src="script/join.js" defer></script>
     
     <meta property="og:title" content="Accra Chamber of Commerce | Home">
     <meta property="og:description" content="Connecting businesses and driving growth in the Greater Accra region.">
@@ -45,8 +46,8 @@
         </div>
     </header>
 
-    <main >
-        <form method="get" action="thanks.html">
+    <main > 
+        <form method="GET" action="thanks.html">
             <label for="fname">First Name</label><br>
             <input type="text" id="fname" name="fname" title="Applicant's Firstname" autocomplete="given-name" required><br>
             <label for="lname">Last Name</label><br>
@@ -58,9 +59,86 @@
             <label for="telephone">Mobile Phone Number</label><br>
             <input type="tel" id="telephone" name="telephone" title="Applicant's Mobile Phone Number" autocomplete="tel" required><br>
             <label for="org-name">Organization's Name</label><br>
-            <input type="text" id="org-name" name="org-name" title="Organization's Name" autocomplete="organization" required>
+            <input type="text" id="org-name" name="org-name" title="Organization's Name" autocomplete="organization" required><br>
+            <label for="membership">Choose a membership level</label><br>
+            <select id="membership" name="membership" required>
+                <option value="" disabled selected>Select a membership level</option>
+                <option value="np">NP membership(for non-profit organization - no fee)</option>
+                <option value="bronze">Bronze membership</option>
+                <option value="silver">Silver membership</option>
+                <option value="gold">Gold membership</option>
+            </select><br>
+            <label for="org-description">Organization Description</label><br>
+            <textarea id="org-description" name="org-description" title="Description your businesse"></textarea><br>
+            <input type="hidden" name="time-stamp" id="time-stamp" value="">
+            <button type="submit">Complete Registration</button>
+
+            
         </form>
-    </main>
+
+        <Section class="card">
+                <h2>Non-Profit Membership Level</h2>
+                <button class="open-button" data-dialog-id="np-dialog">Learn More</button> 
+
+                <dialog id="np-dialog"> 
+                    <p><strong>Cost:</strong> $150</p>
+                    <p><strong>Benefits:</strong></p>
+                    <p>Online Directory Listing: Basic listing in the Chamber's online business directory.</p>
+                    <p>Event Discount: Discounted member rate for all Chamber luncheons and networking events.</p>
+                    <p>Volunteer Access: Opportunity to list volunteer needs on the Chamber website/newsletter.</p>
+                    <p>Non-Profit Spotlights: Eligibility for quarterly non-profit member feature in the Chamber newsletter</p>
+                    <p>Certificate of Origin: Free notary service for Certificates of Origin (upon request).</p>
+                    <button class="close-button">❌</button>
+                </dialog>
+            </Section>
+
+            <Section class="card">
+                <h2>Bronze Membership Level</h2>
+                <button class="open-button" data-dialog-id="bronze-dialog">Learn More</button>
+
+                <dialog id="bronze-dialog">
+                    <p><strong>Cost:</strong> $300</p>
+                    <p><strong>Benefits:</strong></p>
+                    <p>Enhanced Directory Listing: Detailed listing in the online directory with logo, contact info, and business description</p>
+                    <p>Free Networking: Complimentary access for one attendee to standard morning/evening networking mixers.</p>
+                    <p>Chamber Decal: Official Chamber of Commerce member window decal for your business location.</p>
+                    <p>Ribbon Cutting: Eligibility for a complimentary Ribbon Cutting ceremony for new businesses or relocations</p>
+                    <button class="close-button">❌</button>
+                </dialog>
+            </Section>
+
+            <Section class="card">
+                <h2>Silver Membership Level</h2>
+                <button class="open-button" data-dialog-id="silver-dialog">Learn More</button>
+
+                <dialog id="silver-dialog">
+                    <p><strong>Cost:</strong> $420</p>
+                    <p><strong>Benefits:</strong></p>
+                    <p>Social Media Spotlight: Guaranteed feature post on the Chamber's social media channels (once per year)</p>
+                    <p>Free Job/Event Posting: Unlimited complimentary postings of job openings and business events on the Chamber website calendar.</p>
+                    <p>Member-to-Member Discount: Opportunity to participate in or offer a discount through the exclusive M2M program.</p>
+                    <p>Committee Participation: Eligibility for you or an employee to join and vote on Chamber committees (e.g., Advocacy, Events, Membership)</p>
+                    <button class="close-button">❌</button>
+                </dialog>
+            </Section>
+
+            <Section class="card">
+                <h2>Gold Membership Level</h2>
+                <button class="open-button" data-dialog-id="gold-dialog">Learn More</button>
+
+                <dialog id="gold-dialog">
+                    <p><strong>Cost:</strong> $500</p>
+                    <p><strong>Benefits:</strong></p>
+                    <p>Premium Website Placement: Rotating logo placement on the Chamber website homepage (high visibility)</p>
+                    <p>Annual Event Tickets: Two complimentary tickets to the Chamber's major annual event (e.g., Gala, Awards Dinner).</p>
+                    <p>Exclusive Introductions: Executive Director-facilitated introductions to key local leaders and officials upon request.</p>
+                    <p>Newsletter Ad Space: Guaranteed half-page advertisement space in the monthly Chamber e-newsletter (once per year).</p>
+                    <p>Sponsorship Priority: First-right-of-refusal for key event and program sponsorship opportunities.</p>
+                    <button class="close-button">❌</button>
+                </dialog>
+            </Section>
+        
+        </main>
 
     <footer>
         <div class="footer-container container">
@@ -69,4 +147,4 @@
         </div>
     </footer>
 </body>
-</html> 
+</html>

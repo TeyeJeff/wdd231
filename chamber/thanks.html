@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accra Chamber of Commerce | Home</title>
+    <meta name="description" content="Official home page for the Accra Chamber of Commerce. Connecting businesses and driving growth in the Greater Accra region.">
+    <meta name="author" content="Teye Nathaniel Jeff">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/directory-base.css"> 
+    <link rel="stylesheet" href="styles/directory-larger.css"> 
+    
+    <script src="script/homepage.js" defer></script>
+    <script src="script/thanks.js" defer></script>
+    
+    <meta property="og:title" content="Accra Chamber of Commerce | Home">
+    <meta property="og:description" content="Connecting businesses and driving growth in the Greater Accra region.">
+    <meta property="og:image" content="https://teyejeff.github.io/wdd231/images/hero-placeholder.jpg"> 
+    <meta property="og:url" content="https://teyejeff.github.io/wdd231/Chamber/index.html">
+</head>
+<body>
+    <header>
+        <div class="header-container container">
+            <div class="logo">
+                <h1>ACC</h1>
+                <span>Accra Chamber of Commerce</span>
+            </div>
+            
+            <button class="hamburger-btn" id="menuToggle" aria-label="Toggle Navigation Menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            
+            <nav id="mainNav">
+                <a href="index.html" class="active">Home</a>
+                <a href="directory.html">Directory</a>
+                <a href="join.html">Join</a> 
+                <a href="events.html">Events</a>
+            </nav>
+        </div>
+    </header>
+
+    <main > 
+        <h1>Business Registration Details</h1>
+        <div id="results"></div>
+
+
+        <p>Thanks for registering with us. You will hear from one of our customer service representatives within the next 24 hours</p>
+        
+    </main>
+
+    <footer>
+        <div class="footer-container container">
+            <p>© <span id="currentYear"></span> Accra Chamber of Commerce | Teye Nathaniel Jeff</p>
+            <p>Last Modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
