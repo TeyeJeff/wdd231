@@ -47,35 +47,56 @@
     </header>
 
     <main > 
+        <h1 class="tag">JOIN US</h1>
+        <div class="join-container">
+            <div class="form-section">
         <form method="GET" action="thanks.html">
-            <label for="fname">First Name</label><br>
-            <input type="text" id="fname" name="fname" title="Applicant's Firstname" autocomplete="given-name" required><br>
-            <label for="lname">Last Name</label><br>
-            <input type="text" id="lname" name="lname" title="Applicant's Lastname" autocomplete="family-name" required><br>
-            <label for="org-title">Organizational Title</label><br>
-            <input type="text" id="org-title" name="org-title" title="Applicant's Organizational Title" autocomplete="organization-title" pattern="^[a-zA-Z\s-]{7,}$" required><br>
-            <label for="email">Email Address</label><br>
-            <input type="email" id="email" name="email" title="Applicant's Email" placeholder="rob@gmail.com" autocomplete="email" required><br>
-            <label for="telephone">Mobile Phone Number</label><br>
-            <input type="tel" id="telephone" name="telephone" title="Applicant's Mobile Phone Number" autocomplete="tel" required><br>
-            <label for="org-name">Organization's Name</label><br>
-            <input type="text" id="org-name" name="org-name" title="Organization's Name" autocomplete="organization" required><br>
-            <label for="membership">Choose a membership level</label><br>
-            <select id="membership" name="membership" required>
-                <option value="" disabled selected>Select a membership level</option>
-                <option value="np">NP membership(for non-profit organization - no fee)</option>
-                <option value="bronze">Bronze membership</option>
-                <option value="silver">Silver membership</option>
-                <option value="gold">Gold membership</option>
-            </select><br>
-            <label for="org-description">Organization Description</label><br>
-            <textarea id="org-description" name="org-description" title="Description your businesse"></textarea><br>
+            <h2>Membership Application Forms</h2>
+            <label for="fname">First Name<br>
+                <input type="text" id="fname" name="fname" title="Applicant's Firstname" autocomplete="given-name" required>
+            </label><br>
+
+            <label for="lname">Last Name<br>
+                <input type="text" id="lname" name="lname" title="Applicant's Lastname" autocomplete="family-name" required>
+            </label><br>
+
+            <label for="org-title">Organizational Title<br>
+                <input type="text" id="org-title" name="org-title" title="Applicant's Organizational Title" autocomplete="organization-title" pattern="^[a-zA-Z\s-]{7,}$" required>
+            </label><br>
+
+            <label for="email">Email Address<br>
+                <input type="email" id="email" name="email" title="Applicant's Email" placeholder="rob@gmail.com" autocomplete="email" required>
+            </label><br>
+
+            <label for="telephone">Mobile Phone Number<br>
+                <input type="tel" id="telephone" name="telephone" title="Applicant's Mobile Phone Number" autocomplete="tel" required>
+            </label><br>
+
+            <label for="org-name">Organization's Name<br>
+                <input type="text" id="org-name" name="org-name" title="Organization's Name" autocomplete="organization" required>
+            </label><br>
+
+            <label for="membership">Choose a membership level<br>
+                <select id="membership" name="membership" required>
+                    <option value="" disabled selected>Select a membership level</option>
+                    <option value="np">NP membership(for non-profit organization - no fee)</option>
+                    <option value="bronze">Bronze membership</option>
+                    <option value="silver">Silver membership</option>
+                    <option value="gold">Gold membership</option>
+                </select>
+            </label><br>
+
+            <label for="org-description">Organization Description<br>
+                <textarea id="org-description" name="org-description" title="Description your businesse"></textarea>
+            </label><br>
+    
             <input type="hidden" name="time-stamp" id="time-stamp" value="">
-            <button type="submit">Complete Registration</button>
-
-            
+             <button class="reg-button" type="submit">Complete Registration</button>
         </form>
+            </div>
 
+            <div class="levels-section">
+                <h2>Membership Levels</h2>
         <Section class="card">
                 <h2>Non-Profit Membership Level</h2>
                 <button class="open-button" data-dialog-id="np-dialog">Learn More</button> 
@@ -137,7 +158,8 @@
                     <button class="close-button">❌</button>
                 </dialog>
             </Section>
-        
+            </div>
+        </div>
         </main>
 
     <footer>

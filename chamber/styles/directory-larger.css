@@ -93,4 +93,22 @@
     .hero-text {
         padding: 3rem;
     }
+
+    
+
+    .join-container {
+        flex-direction: row; 
+        justify-content: space-between;
+        gap: 40px;
+        max-width: 1000px; 
+        margin: 40px auto; 
+    }
+
+    .form-section {
+        flex: 1; /* Both columns share equal space */
+    }
+
+    .levels-section {
+        flex: 1; /* Both columns share equal space */
+    }
 }
