@@ -1,4 +1,4 @@
-document.getElementById("time-stamp").value = new Date().toDateString(); // Corrected ID from #form-stamp to time-stamp
+document.getElementById("time-stamp").value = new Date().toISOString(); // NEW: Captures precise time for submission
 
 // Select ALL buttons with the class 'open-button'
 const openButtons = document.querySelectorAll(".open-button");
