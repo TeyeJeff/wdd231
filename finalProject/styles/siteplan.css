@@ -1,0 +1,21 @@
+body {
+            font-family: 'Lora', serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: #F5F1E9; 
+            color: #333333; 
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+            color: #2A4B7C; 
+        }
+        .site-info, .site-purpose, .scenarios, .color-schema, .typography {
+            border: 1px solid #2A4B7C; 
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px; 
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
