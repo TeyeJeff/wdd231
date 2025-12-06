@@ -15,30 +15,24 @@
         /* Fixed Medium Image Size */
         width: 300px;
         height: 200px;
+        /* ADDED: Base transition for smooth hover effects */
+        transition: box-shadow 0.4s ease;
     }
 
-    /* Keep all other general styles from the base file or override them as needed for this intermediate screen size, if any. */
-}
-
-@media (min-width: 1025px) { /* Updated from 768px to 1025px for Large Screens */
-    /* --- DISCOVER PAGE LAYOUT (Large Screens: 1025px +) --- */
-    .discover-layout {
-        /* Adjust column size for a wider layout */
-        grid-template-columns: 4fr 1fr;
+    .discover-card figure img {
+        /* ADDED: Base transition for smooth hover effects */
+        transition: transform 0.4s ease;
     }
 
-    #places-container {
-        /* Cards: Three columns in the places area */
-        grid-template-columns: 1fr 1fr 1fr;
+    /* HOVER EFFECT: Lift the figure container and zoom the image */
+    .discover-card:hover figure {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Lift effect */
     }
-
-    .discover-card figure {
-        /* Fixed Large Image Size */
-        width: 320px;
-        height: 220px;
+    .discover-card:hover figure img {
+        transform: scale(1.05); /* Zoom effect */
     }
     
-    /* --- Header & Navigation (Desktop) --- */
+    /* --- General Header Styles for Medium Screens --- */
     
     .header-container {
         flex-wrap: nowrap;
@@ -67,8 +61,69 @@
     #mainNav a:hover {
         background-color: rgba(255, 255, 255, 0.1);
     }
+}
 
-    /* --- Directory Hero Search Bar (Desktop) --- */
+@media (min-width: 1025px) { /* Large Screens: 1025px + */
+    /* --- DISCOVER PAGE LAYOUT (Large Screens: 1025px +) --- */
+    .discover-layout {
+        /* Adjust column size for a wider layout */
+        grid-template-columns: 4fr 1fr;
+    }
+
+    #places-container {
+        /* Cards: Three columns in the places area */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* NEW CARD LAYOUT FOR LARGE SCREENS */
+    .discover-card {
+        /* Define the 2-column structure: 1fr for image, 2fr for content */
+        display: grid;
+        grid-template-columns: 1fr 2fr; 
+        
+        /* Define the 6 rows needed for the content stack */
+        grid-template-rows: auto auto auto auto auto auto;
+        gap: 10px 15px; /* Vertical | Horizontal gap */
+
+        /* Apply the custom grid template areas */
+        grid-template-areas:
+            "image title"
+            "image focus"
+            "image address"
+            "image description"
+            "image cost"
+            "image button";
+        padding: 20px;
+    }
+
+    .discover-card figure {
+        grid-area: image;
+        /* Force the image to span all 6 content rows */
+        grid-row: 1 / 7; 
+        
+        /* Fixed Large Image Size */
+        width: 100%;
+        height: 100%;
+        margin: 0; /* Remove centering margin, span full width of its column */
+
+        /* ADDED: Base transition for smooth hover effects */
+        transition: box-shadow 0.4s ease;
+    }
+
+    .discover-card figure img {
+        /* ADDED: Base transition for smooth hover effects */
+        transition: transform 0.4s ease;
+    }
+
+    /* HOVER EFFECT: Lift the figure container and zoom the image */
+    .discover-card:hover figure {
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Lift effect */
+    }
+    .discover-card:hover figure img {
+        transform: scale(1.05); /* Zoom effect */
+    }
+
+    /* --- General Desktop Styles (from previous snippet) --- */
     .search-bar input {
         flex: 2 1 200px; 
         min-width: 200px;
@@ -82,7 +137,7 @@
         flex: 1 1 100px; 
     }
 
-    /* --- Directory View Overrides --- */
+    /* Directory View Overrides */
     .directory.view-grid {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     }
@@ -96,57 +151,8 @@
         overflow: hidden;
     }
     
-    /* ... (Rest of List View Desktop Styles) ... */
-
-    /* --- Home Page Specific Overrides --- */
-    
-    .hero-text h1 {
-        font-size: 3.5rem;
-    }
-    
-    /* Weather and Spotlights Side-by-Side */
+    /* Home Page Specific Overrides */
     .mid-section-grid {
         grid-template-columns: 1fr 2fr; 
-    }
-    
-    /* Place weather on the left on desktop */
-    .weather-section {
-        order: -1; 
-    }
-
-    .hero-image {
-        height: 75vh;
-        max-height: 800px;
-    }
-
-    .hero-text h1 {
-        font-size: 3.8rem;
-        letter-spacing: 1px;
-    }
-
-    .hero-text p {
-        font-size: 1.3rem;
-    }
-
-    .hero-text {
-        padding: 3rem;
-    }
-
-    
-
-    .join-container {
-        flex-direction: row; 
-        justify-content: space-between;
-        gap: 40px;
-        max-width: 1000px; 
-        margin: 40px auto; 
-    }
-
-    .form-section {
-        flex: 1; /* Both columns share equal space */
-    }
-
-    .levels-section {
-        flex: 1; /* Both columns share equal space */
     }
 }
