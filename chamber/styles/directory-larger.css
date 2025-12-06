@@ -1,5 +1,43 @@
+@media (min-width: 641px) and (max-width: 1024px) {
+    /* --- DISCOVER PAGE LAYOUT (Medium Screens: 641px - 1024px) --- */
+    .discover-layout {
+        /* Named Grid Areas: Places (3/4 width) | Sidebar (1/4 width) */
+        grid-template-columns: 3fr 1fr;
+        grid-template-areas: "places sidebar";
+    }
 
-@media (min-width: 768px) {
+    #places-container {
+        /* Cards: Two columns in the places area */
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .discover-card figure {
+        /* Fixed Medium Image Size */
+        width: 300px;
+        height: 200px;
+    }
+
+    /* Keep all other general styles from the base file or override them as needed for this intermediate screen size, if any. */
+}
+
+@media (min-width: 1025px) { /* Updated from 768px to 1025px for Large Screens */
+    /* --- DISCOVER PAGE LAYOUT (Large Screens: 1025px +) --- */
+    .discover-layout {
+        /* Adjust column size for a wider layout */
+        grid-template-columns: 4fr 1fr;
+    }
+
+    #places-container {
+        /* Cards: Three columns in the places area */
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .discover-card figure {
+        /* Fixed Large Image Size */
+        width: 320px;
+        height: 220px;
+    }
+    
     /* --- Header & Navigation (Desktop) --- */
     
     .header-container {

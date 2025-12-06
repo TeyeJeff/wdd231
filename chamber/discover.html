@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/directory-base.css"> 
     <link rel="stylesheet" href="styles/directory-larger.css"> 
+    <link rel="stylesheet" href="styles/directory-medium.css">
     
     <script src="script/homepage.js" defer></script>
-    <script src="script/thanks.js" defer></script>
+    <script src="script/discover.js" type="module" ></script>
     
     <meta property="og:title" content="Accra Chamber of Commerce | Home">
     <meta property="og:description" content="Connecting businesses and driving growth in the Greater Accra region.">
@@ -46,13 +47,23 @@
         </div>
     </header>
 
-    <main > 
-        <h1>Business Registration Details</h1>
-        <div id="results"></div>
+    <main>
+        <div class="hero-discover">
+        <h2>Discover the Greater Accra Region</h2>
+        <p>Explore the key historical sites, bustling markets, and modern commercial hubs that drive the region's economy and culture.</p>
+    </div>
 
+    <div class="discover-layout container">
+        <section id="places-container">
+            </section>
 
-        <p>Thanks for registering with us. You will hear from one of our customer service representatives within the next 24 hours</p>
-        
+        <aside class="sidebar">
+            <h3>Did You Know?</h3>
+            <p>Accra is one of the fastest-growing cities in West Africa, attracting significant foreign investment in technology, finance, and logistics.</p>
+            <p>The city's economy is heavily influenced by the diverse commercial activity found in places like Makola Market and the modern commercial centers along Oxford Street.</p>
+            <button onclick="window.location.href='join.html'">Join the Chamber Today</button>
+        </aside>
+    </div>
     </main>
 
     <footer>

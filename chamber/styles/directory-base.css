@@ -1,4 +1,3 @@
-
 :root {
     --primary-color: #1a3765; /* Dark Blue */
     --secondary-color: #ffa500; /* Orange/Gold */
@@ -477,4 +476,148 @@ footer {
     padding: 1rem 0;
     margin-top: 2rem;
     font-size: 0.85rem;
+}
+
+/* --- DISCOVER PAGE STYLES (Small Screens: 320px - 640px) --- */
+.hero-discover {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.hero-discover h2 {
+    color: white;
+}
+
+.discover-layout {
+    display: grid;
+    /* Named Grid Areas: Stacked vertically for mobile */
+    grid-template-areas:
+        "places"
+        "sidebar";
+    gap: 20px;
+}
+
+#places-container {
+    grid-area: places;
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for all 8 cards */
+    gap: 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 5px;
+}
+
+.sidebar button {
+    margin-top: 15px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 50px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+
+.discover-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    
+    /* ADDED: Grid setup for internal card layout */
+    display: grid; 
+    gap: 10px; 
+    
+    /* Grid Template Areas for Small Screens: Image, Title, then rest */
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "image"
+        "title"
+        "focus"
+        "address"
+        "description"
+        "cost"
+        "button";
+}
+
+/* Assign elements to named areas */
+.discover-card figure {
+    grid-area: image; 
+    /* Fixed Small Image Size */
+    width: 280px; 
+    height: 180px;
+    margin: 10px auto 15px auto; 
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.discover-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills container without distortion */
+    display: block;
+}
+
+.discover-card h2 {
+    grid-area: title; /* Assign area */
+    font-size: 1.5em;
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.discover-card address {
+    grid-area: address; /* Assign area */
+    font-style: normal;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.focus-tag {
+    grid-area: focus; /* Assign area */
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 0;
+    font-size: 0.9em;
+}
+
+.discover-card p:not(.focus-tag):not(.cost-info) {
+    grid-area: description;
+}
+
+.cost-info {
+    grid-area: cost; /* Assign area (overrides general p rule) */
+    font-style: italic;
+    margin-top: 0; 
+}
+
+.learn-more-btn {
+    grid-area: button; /* Assign area */
+    margin-top: 0; 
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
 }
