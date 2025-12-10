@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaabisJewels - Shop Now</title>
+    <meta name="description" content="An online jewelry and beads shop">
+    <meta name="author" content="Teye Nathaniel Jeff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/maabis-small.css">
+    <link rel="stylesheet" href="styles/maabis.css">
+    <link rel="icon" href="maabis-favicon.ico">
+    <script src="scripts/maabis.js" defer></script> 
+</head>
+<body>
+    <header class="sticky-hearder">
+        <img src="images/maabislogo.jpg" alt="MaabisJewels" class="logo">
+        <nav class="navigation">
+            <ul>
+                <li><a href="maabis.html" class="link">Home</a></li>
+                <li><a href="maabis-shop.html" class="link">Shop</a></li>
+                <li><a href="maabis-contactus.html" class="link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1 class="products">Discover Jewelry That Suits Your Taste.</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by brand name....">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <div id="results"></div>
+        <div>
+            <nav id="menu">
+                <button class="hamburger" aria-label="Toggle categories">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            <ul class="navigation2">
+                <li><a id="all" href="#" title="All">All</a> </li>
+                <li><a id="watch" href="#" title="Watches">Watches</a></li>
+                <li><a id="rings" href="#" title="Rings">Rings</a></li>
+                <li><a id="bracelets" href="#" title="Bracelets">Bracelets</a></li>
+                <li><a id="earrings" href="#" title="Earrings">Earrings</a></li>
+                <li><a id="anklets" href="#" title="Anklets">Anklets</a></li>
+            </ul>           
+            </nav>
+        </div>
+
+        <div class="jewelry-container" id="jewelryContainer"></div>
+
+        <div class="container">
+            <div class="services">
+                <div class="icon">
+                    <img src="images/delivery-bike_5630677.png" alt="delivery">
+                </div>
+            
+                <h3>Delivery Services</h3>
+                <ul>
+                    <li><strong>Fast & Reliable</strong>: Enjoy swift delivery with tracking options</li>
+                    <li><strong>Nationwide Delivery</strong>: Available across all 16 regions in the country</li>
+                    <li><strong>Free Shipping</strong>: Enjoy free deliveries on orders above $99(terms apply)</li>
+                </ul>
+            </div>
+
+            <div class="services">
+                <div class="icon">
+                    <img src="images/customer-care_17202880.png" alt="customer care">
+                </div>
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><strong>Support</strong>: Contact us anytime via email or whatsapp</li>
+                    <li><strong>Easy Returns</strong>: Hassle-free returns within 15days</li>
+                    <li><strong>Dedicated Team</strong>: Our support team are always available to assist you</li>
+                </ul>
+            </div>
+
+            <div class="services">
+                <div class="icon">
+                    <img src="images/credit-card_2434513.png" alt="payment method">
+                </div>
+                <h3>Payment Security</h3>
+                <ul>
+                    <li><strong>Secure Transactions</strong>: Protected by advanced encryption technology</li>
+                    <li><strong>Multiple Methods</strong>: Pay with credit cards, bank transfer and mobile money</li>
+                    <li><strong>Safe & Trusted</strong>: Certified for secure online payment</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="newsletter">
+            <h2>Stay Updated</h2>
+            <p>Sign up for our newsletter to receive the lastest adventure updates!</p>
+            <form class="newsletter-form">
+                <fieldset>
+                    <legend>NewsLetter</legend>
+                    <label for="fullname">Fullname</label>
+                    <input type="text" id="fullname" name="fullname">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your mail">
+                    <button type="submit">Subscribe</button>
+                </fieldset>
+            </form>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>©️2025, MaabisJewels 💎Teye Nathaniel Jeff💎</p>
+        <nav class="socialmedia">
+            <a href="https://www.tiktok.com/en/"><img src="images/tik.webp" alt="TikTok"></a>
+            <a href="https://www.instagram.com"><img src="images/insta.webp" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/fb.webp" alt="Facebook"></a>
+        </nav>
+        <nav class="source">
+            <a href='https://www.pexels.com/'>Jewelry Images via Pexels</a>
+        </nav>        
+    </footer>
+</body>
+</html>
