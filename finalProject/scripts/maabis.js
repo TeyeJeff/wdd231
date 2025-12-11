@@ -1,5 +1,3 @@
-// scripts/maabis.js - FINAL WITH WHATSAPP CHECKOUT
-
 const hamburger = document.querySelector(".hamburger");
 const navigation2 = document.querySelector(".navigation2");
 const jewelryContainer = document.getElementById("jewelryContainer");
@@ -9,13 +7,13 @@ const results = document.getElementById("results");
 
 let allJewelries = [];
 
-// Hamburger Menu
+// My Hamburger Menu
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("show");
     navigation2.classList.toggle("show");
 });
 
-// Load products
+// Loading  products from jewelry json file using asynchronous method
 async function loadJewelries() {
     try {
         const res = await fetch('data/jewelries.json');
@@ -27,7 +25,7 @@ async function loadJewelries() {
     }
 }
 
-// Display cards
+// Displaying all jewelries in the json file on a card 
 function displayJewelries(items) {
     jewelryContainer.innerHTML = '';
     if (!items.length) {
@@ -52,7 +50,30 @@ function displayJewelries(items) {
     document.querySelectorAll('.add-to-cart-btn').forEach(b => b.onclick = addToCart);
 }
 
-// Filter & Search (same as before)
+// Filter & search for a jewelry
+
+function handleSearch() {
+    const searchTerm = searchInput.value.toLowerCase().trim();
+    if (!searchTerm) {
+        displayJewelries(allJewelries);
+        results.textContent = '';
+        jewelryContainer.style.display = 'flex';
+        return;
+    }
+
+    const filtered = allJewelries.filter(j =>
+        j.brandName.toLowerCase().includes(searchTerm) ||
+        j.type.toLowerCase().includes(searchTerm) ||
+        (j.material && j.material.toLowerCase().includes(searchTerm))
+    );
+
+    displayJewelries(filtered);
+    jewelryContainer.style.display = 'flex';
+    results.textContent = filtered.length > 0
+        ? `Showing ${filtered.length} results for "${searchTerm}"`
+        : `No results found for "${searchTerm}"`;
+}
+
 function filterByCategory(cat) {
     const f = cat === 'All' ? allJewelries : allJewelries.filter(i => i.type === cat);
     displayJewelries(f);
@@ -65,10 +86,10 @@ document.querySelectorAll('.navigation2 a').forEach(a => {
         filterByCategory(m[a.id] || 'All');
     });
 });
-searchBtn.onclick = () => { /* same search code as before */ };
+searchBtn.onclick = handleSearch; 
 searchInput.oninput = () => { if(!searchInput.value.trim()) { results.innerHTML=''; jewelryContainer.style.display='flex'; }};
 
-// ====================== CART SYSTEM ======================
+// CART SYSTEM USING MODAL DIALOG  
 let cart = JSON.parse(localStorage.getItem('maabisCart')) || [];
 
 const cartModal = document.getElementById('cartModal');
@@ -138,7 +159,7 @@ function renderCart() {
     });
 }
 
-// WHATSAPP CHECKOUT – THIS IS THE MAGIC
+// WHATSAPP CHECKOUT
 checkoutBtn.onclick = () => {
     if (!cart.length) return alert("Cart is empty!");
 
@@ -156,7 +177,7 @@ checkoutBtn.onclick = () => {
 
     msg += `Total: *$${total.toFixed(2)}*\n\nThank you!`;
 
-    const phone = "233241234567"; // CHANGE THIS TO YOUR NUMBER (no + or spaces)
+    const phone = "233204721265"; 
     window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, '_blank');
     cartModal.close();
 };
@@ -164,7 +185,7 @@ checkoutBtn.onclick = () => {
 closeModal.onclick = () => cartModal.close();
 clearCartBtn.onclick = () => { if(confirm("Clear cart?")) { cart=[]; saveCart(); updateCartCount(); renderCart(); }};
 
-// Init
+// Initializing
 document.addEventListener('DOMContentLoaded', () => {
     loadJewelries();
     updateCartCount();

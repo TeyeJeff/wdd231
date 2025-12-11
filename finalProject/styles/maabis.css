@@ -553,7 +553,7 @@ footer p {
     height: 15px;
 }
 
-/* ==================== CART MODAL & ADD TO CART BUTTONS ==================== */
+/*** Styling add button**/
 
 .add-to-cart-btn {
     background-color: #333;
@@ -570,9 +570,10 @@ footer p {
 
 .add-to-cart-btn:hover {
     background-color: #555;
+    color: #c0392b;
 }
 
-/* ==================== CART MODAL – FIXED VERSION ==================== */
+/** CART MODAL **/
 
 dialog#cartModal {
     max-width: 520px;
@@ -619,6 +620,7 @@ dialog#cartModal::backdrop {
 
 .close-btn:hover {
     background: rgba(255,255,255,0.2);
+    color: #c0392b;
 }
 
 .cart-items {
@@ -716,10 +718,10 @@ dialog#cartModal::backdrop {
 }
 
 .clear-cart-btn  { background: #ddd; }
-.clear-cart-btn:hover { background: #bbb; }
+.clear-cart-btn:hover { background: #bbb; color: #c0392b}
 
 .checkout-btn    { background: #333; color: white; }
-.checkout-btn:hover { background: #111; }
+.checkout-btn:hover { background: #111; color: #c0392b; }
 
 .add-to-cart-btn {
     background: #333;

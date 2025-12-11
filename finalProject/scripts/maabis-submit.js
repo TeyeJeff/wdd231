@@ -2,8 +2,8 @@ const contactinfo = new URLSearchParams(window.location.search);
 console.log(contactinfo);
 
 
-document.querySelector("#results").innerHTML = `<p> Contact Information for <strong>${contactinfo.get("name")}</strong> with email address, <strong>${contactinfo.get("email")}</strong> and your mobile number,<strong> ${contactinfo.get("phone")}.
- `
+document.querySelector("#results").innerHTML = `<p> Contact Information for <strong>${contactinfo.get("name")}</strong> with email address, <strong>${contactinfo.get("email")}</strong> and your mobile number,<strong> ${contactinfo.get("phone")}</strong>.
+ Service Type: <strong> ${contactinfo.get("services")}</strong>.`
 
 
  const storageKey = "pageOpenCount";
