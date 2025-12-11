@@ -9,10 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="styles/maabis-small.css">
     <link rel="stylesheet" href="styles/maabis.css">
-    <link rel="icon" href="maabis-favicon.ico">
+    <link rel="stylesheet" href="styles/maabis-small.css">
     <script src="scripts/maabis.js" defer></script> 
 </head>
 <body>
@@ -59,7 +57,6 @@
                 <div class="icon">
                     <img src="images/delivery-bike_5630677.png" alt="delivery">
                 </div>
-            
                 <h3>Delivery Services</h3>
                 <ul>
                     <li><strong>Fast & Reliable</strong>: Enjoy swift delivery with tracking options</li>
@@ -106,7 +103,24 @@
                     <button type="submit">Subscribe</button>
                 </fieldset>
             </form>
-            </div>
+        </div>
+
+        <!-- FIXED Shopping Cart Modal -->
+<dialog id="cartModal">
+    <div class="modal-header">
+        <h2>Your Cart (<span id="cartCount">0</span>)</h2>
+        <button id="closeModal" class="close-btn" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+        <p style="text-align:center; color:#666;">Your cart is empty</p>
+    </div>
+
+    <div class="modal-footer">
+        <button id="clearCart" class="clear-cart-btn">Clear All</button>
+        <button id="checkoutBtn" class="checkout-btn">Proceed to Checkout</button>
+    </div>
+</dialog>
 
     </main>
 

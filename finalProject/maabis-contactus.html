@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MaabisJewels - Contact Us</title>
+    <meta name="description" content="An online jewelry and beads shop">
+    <meta name="author" content="Teye Nathaniel Jeff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Arimo:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/maabis.css">
+    <link rel="stylesheet" href="styles/maabis-small.css">
+    <script src="scripts/maabis-form.js" defer></script>
+</head>
+<body>
+    <header class="sticky-hearder">
+        <img src="images/maabislogo.jpg" alt="MaabisJewels" class="logo">
+        <nav class="navigation">
+            <ul>
+                <li><a href="maabis.html" class="link">Home</a></li>
+                <li><a href="maabis-shop.html" class="link">Shop</a></li>
+                <li><a href="maabis-contactus.html" class="link">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact-details">
+        <h2>Send Us a Message</h2>
+        <p>Got questions about our jewelries, other products or services? Our friendly team at MaabisJewels is here to assist you - whether you need help choosing the perfect piece, learning about customization options, or tracking your order, we're just a message away!</p>
+        <p><strong>MaabisJewels</strong></p>
+        <p><strong>Phone:</strong> +233-204-721-265</p>
+        <p><strong>Email:</strong><a href="teyejeff18@gamil.com">teyejeff18@gmail.com</a></p>
+        <p><strong>Address:</strong> Accra, Ghana</p>
+        <div class="googlemaps">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15884.44469037135!2d-0.21327217887160102!3d5.550533074557678!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdf90985855a833%3A0x2aac35e3ca429cf1!2sThe%20Octagon%2C%20Accra%20Central!5e0!3m2!1sen!2sgh!4v1754241540648!5m2!1sen!2sgh" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <p><strong>Hours:</strong> Mondays-Friday: 8am - 4pm & Saturday: 10am - 3pm</p>
+    </section>
+
+    <div class="container">
+            <div class="services">
+                <div class="icon">
+                    <img src="images/delivery-bike_5630677.png" alt="delivery">
+                </div>
+            
+                <h3>Delivery Services</h3>
+                <ul>
+                    <li><strong>Fast & Reliable</strong>: Enjoy swift delivery with tracking options</li>
+                    <li><strong>Nationwide Delivery</strong>: Available across all 16 regions in the country</li>
+                    <li><strong>Free Shipping</strong>: Enjoy free deliveries on orders above $99(terms apply)</li>
+                </ul>
+            </div>
+
+            <div class="services">
+                <div class="icon">
+                    <img src="images/customer-care_17202880.png" alt="customer care">
+                </div>
+                <h3>Customer Care</h3>
+                <ul>
+                    <li><strong>Support</strong>: Contact us anytime via email or whatsapp</li>
+                    <li><strong>Easy Returns</strong>: Hassle-free returns within 15days</li>
+                    <li><strong>Dedicated Team</strong>: Our support team are always available to assist you</li>
+                </ul>
+            </div>
+
+            <div class="services">
+                <div class="icon">
+                    <img src="images/credit-card_2434513.png" alt="payment method">
+                </div>
+                <h3>Payment Security</h3>
+                <ul>
+                    <li><strong>Secure Transactions</strong>: Protected by advanced encryption technology</li>
+                    <li><strong>Multiple Methods</strong>: Pay with credit cards, bank transfer and mobile money</li>
+                    <li><strong>Safe & Trusted</strong>: Certified for secure online payment</li>
+                </ul>
+            </div>
+        </div>
+    
+    <section class="contact-section">
+        <h3><strong>We'd love to hear from you! Please fill out the form below to get in touch or inquire about our products.</strong></h3>
+
+        <form id="contactForm" class="contact-form" method="GET" action="maabis-submit.html">
+            <fieldset>
+                <legend>Customer Details</legend>
+                <label for="name">Your Name:<span class="required">*</span></label>
+                <input type="text" id="name" name="name" required><br>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Mobile Number: <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required><br>
+            </fieldset>
+            <fieldset>
+                <legend>Product Details</legend>
+                <label>Services: <span class="required">*</span></label><br>
+                <div class="radio-buttons">
+                    <label><input type="radio" id="inquiry" name="services" value="inquiry">Inquiry</label>
+                    <label><input type="radio" id="reservation" name="services" value="reservation">Reservation</label>
+                    <label><input type="radio" id="customization" name="services" value="customization">Customization</label>
+                </div>
+
+                <label for="product">Product: <span class="required">*</span><br></label>
+                <select name="product" id="product" required>
+                    <option disabled selected>Choose a Product</option>
+                    <option value="watch">Watch</option>
+                    <option value="ring">Ring</option>
+                    <option value="earring">Earring</option>
+                    <option value="bracelet">Bracelet</option>
+                    <option value="anklet">Anklets</option>
+                </select><br>
+
+                <label for="selected">Enter Product Name </label><br>
+                <input type="text" id="selected" placeholder="Casio Vintage 3pcs">
+                <button type="button" id="addBtn">Add Product</button>
+                <ul id="list"></ul>
+                <br>
+                <button type="submit" id="submitBtn">Send Message</button>
+
+            </fieldset>
+
+
+
+
+
+
+        </form>
+
+
+
+
+
+
+    </section>
+
+    <footer>
+        <p>©️2025, MaabisJewels 💎Teye Nathaniel Jeff💎</p>
+        <nav class="socialmedia">
+            <a href="https://www.tiktok.com/en/"><img src="images/tik.webp" alt="TikTok"></a>
+            <a href="https://www.instagram.com"><img src="images/insta.webp" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="images/fb.webp" alt="Facebook"></a>
+        </nav>
+        <nav>
+            <a href='https://www.pexels.com/'>Jewelry Images via Pexels</a>
+        </nav>        
+    </footer>
+</body>
+</html>
